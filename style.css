@@ -85,11 +85,18 @@ body * {
   border-radius: 50%;
 
   cursor: pointer;
+
+  animation: slide-back .3s;
+
+  transition: outline .1s;
 }
 
 .light #switch button {
-  right: 0;
-  left: initial;
+  animation: slide-in .3s forwards;
+}
+
+#switch button:hover {
+  outline: 8px solid var(--highlight-color);
 }
 
 #switch span {
@@ -182,4 +189,27 @@ footer {
     --bg-url: url(./assets/bg-desktop-light.jpg);
   }
 
+}
+
+
+/* animation */
+
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-back {
+  from {
+    left: 50%;
+  }
+
+  to {
+    left: 0;
+  }
 }
