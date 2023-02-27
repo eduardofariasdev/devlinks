@@ -85,8 +85,6 @@ body * {
   cursor: pointer;
 }
 
-#switch button:hover {}
-
 .light #switch button {
   right: 0;
   left: initial;
